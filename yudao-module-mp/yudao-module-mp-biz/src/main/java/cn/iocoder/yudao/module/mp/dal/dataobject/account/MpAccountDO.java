@@ -19,7 +19,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class MpAccountDO extends TenantBaseDO {
+public class MpAccountDO extends Ba {
 
     /**
      * 编号
