@@ -102,6 +102,7 @@ public class DeptDataPermissionRule implements DataPermissionRule {
         }
 
         // 获得数据权限
+        // context 针对同一段逻辑可能会进行多次sql操作，避免每次都进行数据范围查询，所以需要缓存起来，避免重复计算，提高性能
         DeptDataPermissionRespDTO deptDataPermission = loginUser.getContext(CONTEXT_KEY, DeptDataPermissionRespDTO.class);
         // 从上下文中拿不到，则调用逻辑进行获取
         if (deptDataPermission == null) {

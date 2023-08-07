@@ -17,6 +17,8 @@
         <module>yudao-module-infra</module>
         <!-- 示例项目 -->
         <module>yudao-example</module>
+        <module>yudao-module-bpm</module>
+
     </modules>
 
     <name>${project.artifactId}</name>

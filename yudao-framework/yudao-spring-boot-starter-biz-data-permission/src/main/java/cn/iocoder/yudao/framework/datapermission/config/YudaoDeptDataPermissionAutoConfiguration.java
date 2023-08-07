@@ -21,6 +21,10 @@ import java.util.List;
 @ConditionalOnBean(value = {PermissionApi.class, DeptDataPermissionRuleCustomizer.class})
 public class YudaoDeptDataPermissionAutoConfiguration {
 
+    /*
+    * customizers拿到所有的DeptDataPermissionRuleCustomizer的实现类
+    * 然后依次执行所有实现类的方法补全配置
+    * */
     @Bean
     public DeptDataPermissionRule deptDataPermissionRule(PermissionApi permissionApi,
                                                          List<DeptDataPermissionRuleCustomizer> customizers) {
